@@ -14,7 +14,7 @@ B. Consequently, not realizing that entrypoint.tsx is essentially index.ts helpe
 C. Parcel supports folks that just need TypeScript (alone) with the **.ts** extension.
 D. Parcel supports folks needing TypeScript + React + JSX with the **.tsx** extension.
 
-To take heed!
+So take heed!
 
 ```javascript
 import * as React from 'react'
