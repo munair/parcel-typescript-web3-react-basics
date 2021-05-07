@@ -42,10 +42,22 @@ export const Wallet = () => {
   )
 }
 
+export const Balance = () => {
+  const { account, library } = useWeb3React<Web3Provider>()
+  const { data: balance } = useSWR(['getBalance', account, 'latest'], {
+    fetcher: fetcher(library),
+  })
+  if(!balance) {
+    return <div>...</div>
+  }
+  return <div>Balance: {balance.toString()}</div>
+}
+
 export const App = () => {
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
       <Wallet />
+      <Balance />
     </Web3ReactProvider>
   )
 }
