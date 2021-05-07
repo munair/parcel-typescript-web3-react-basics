@@ -1,4 +1,10 @@
 // tsconfig.json
+// To use Typescript + React + JSX, you need to:
+//
+// 1. use the .tsx extension
+// 2. properly require React
+// 3. use a tsconfig with a special option "jsx": "react"
+
 {
   "compilerOptions": {
     "jsx": "react"
